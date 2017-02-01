@@ -1,4 +1,3 @@
-// STEP 1.
 //function fibonacci (n)  {
 //    var fibby = 0;
 //    if (n <= 2)  {
