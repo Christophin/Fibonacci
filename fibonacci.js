@@ -13,7 +13,9 @@ function fibonacci (n)  {
 // Step 3
 var obj = {};
 function fibonacci (n) {
+    var fibby = 0;
     if (obj[n]) {
+        ;
         console.log(obj);
         return obj[n];
     } else {
@@ -46,20 +48,17 @@ var memoized = memoize(fibonacci);
 
 
 
-// Negative and Positive Fibonacci
-//
-//function trueFib (n) {
-//    var fibonacci = function (n) {
-//        if (n === 1 || n === 0) {
-//            return n;
-//        } else if (n > 1) {
-//            return fibonacci(n - 2) + fibonacci(n - 1);
-//        } else {
-//            return trueFib(Math.pow(-1, Math.abs(n) + 1) * fibonacci(Math.abs(n)));
-//        }
-//    };
-//    return fibonacci(n);
+//Negative and Positive Fibonacci
 
+    var trueFib = function (n) {
+        if (n === 1 || n === 0) {
+            return n;
+        } else if (n > 1) {
+            return trueFib(n - 2) + trueFib(n - 1);
+        } else {
+            return (Math.pow(-1, Math.abs(n) + 1) * trueFib(Math.abs(n)));
+        }
+    };
 
 
 //    if (n > 1)    {
